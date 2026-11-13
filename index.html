@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+  <header class="portada">
+    <nav class="navbar navbar-expand-xl container-fluid px-4 py-3" aria-label="Principal">
+      <a class="navbar-brand marca" href="./index.html" aria-label="Rueda Libre, ir al inicio">Rueda Libre</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion" aria-controls="navegacion" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navegacion">
+        <ul class="navbar-nav mt-3 mt-xl-0" id="menu">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./index.html"><strong>Inicio</strong></a></li>
+          <li class="nav-item"><a class="nav-link" href="./paginas/tarifas.html"><strong>Tarifas y rutas</strong></a></li>
+          <li class="nav-item"><a class="nav-link" href="./paginas/reservas.html"><strong>Reservas</strong></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="portadaicono" aria-labelledby="titulo-inicio">
+      <img src="./img/images.jpg" alt="Logo de Rueda Libre">
+      <h1 id="titulo-inicio">Rueda Libre | Alquiler de bicicletas en Medellín</h1>
+    </section>
+
+    <section class="seccion introduccion text-center" aria-label="Introducción">
+      <p>Bienvenido a Rueda Libre, tu solución para moverte de manera sostenible por Medellín con los mejores precios y el mejor servicio a tu disposición.</p>
+      <a class="btn boton-cta mt-2" href="./paginas/reservas.html">Reservar ahora</a>
+    </section>
+
+    <section class="seccion quienes_somos" aria-labelledby="quienes-somos">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-xl-6">
+          <h2 id="quienes-somos">¿Quiénes somos?</h2>
+          <p>Somos una empresa dedicada al alquiler de bicicletas en Medellín, ofreciendo una experiencia única de movilidad sostenible. Creemos en el poder de la bicicleta para mejorar tu bienestar, cuidar el medio ambiente y conectar personas con sus destinos.</p>
+        </div>
+        <div class="col-12 col-xl-6">
+          <img class="img-fluid d-block mx-auto" src="./img/quienessomos.png" alt="Personas con bicicletas">
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-ancha flota" aria-labelledby="nuestra-flota">
+      <h2 id="nuestra-flota">Nuestra flota</h2>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+
+        <div class="col">
+          <article class="card h-100 p-3 align-items-center">
+            <h3 class="card-title">Urbana Clásica</h3>
+            <img src="./img/urbana_clasica.png" alt="Bicicleta urbana clásica">
+            <p class="mt-3">Cómoda y liviana para las ciclorrutas.</p>
+            <p><strong>$10.000</strong></p>
+            <a class="btn boton-flota mt-auto" href="./paginas/reservas.html">Reservar ahora</a>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card h-100 p-3 align-items-center">
+            <h3 class="card-title">Urbana Plegable</h3>
+            <img src="./img/urbana_plegable.png" alt="Bicicleta urbana plegable">
+            <p class="mt-3">Se dobla en segundos; ideal para combinar con el metro.</p>
+            <p><strong>$12.000</strong></p>
+            <a class="btn boton-flota mt-auto" href="./paginas/reservas.html">Reservar ahora</a>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card h-100 p-3 align-items-center">
+            <h3 class="card-title">Montaña Trail</h3>
+            <img src="./img/montana_trail.png" alt="Bicicleta de montaña trail">
+            <p class="mt-3">Suspensión delantera y 21 cambios para las subidas.</p>
+            <p><strong>$15.000</strong></p>
+            <a class="btn boton-flota mt-auto" href="./paginas/reservas.html">Reservar ahora</a>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card h-100 p-3 align-items-center">
+            <h3 class="card-title">Gravel Aventura</h3>
+            <img src="./img/gravel_aventura.png" alt="Bicicleta gravel aventura">
+            <p class="mt-3">Para rutas mixtas de asfalto y destapado.</p>
+            <p><strong>$18.000</strong></p>
+            <a class="btn boton-flota mt-auto" href="./paginas/reservas.html">Reservar ahora</a>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card h-100 p-3 align-items-center">
+            <h3 class="card-title">Eléctrica Urbana</h3>
+            <img src="./img/electrica_urbana.png" alt="Bicicleta eléctrica urbana">
+            <p class="mt-3">Asistencia eléctrica con 45 km de autonomía.</p>
+            <p><strong>$25.000</strong></p>
+            <a class="btn boton-flota mt-auto" href="./paginas/reservas.html">Reservar ahora</a>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card h-100 p-3 align-items-center">
+            <h3 class="card-title">Infantil</h3>
+            <img src="./img/infantil.png" alt="Bicicleta infantil">
+            <p class="mt-3">Para niños de 6 a 10 años.</p>
+            <p><strong>$8.000</strong></p>
+            <a class="btn boton-flota mt-auto" href="./paginas/reservas.html">Reservar ahora</a>
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="card h-100 p-3 align-items-center">
+            <h3 class="card-title">Tándem</h3>
+            <img src="./img/Tandem.png" alt="Bicicleta tándem">
+            <p class="mt-3">Para dos personas; perfecta para pasear en pareja.</p>
+            <p><strong>$20.000</strong></p>
+            <a class="btn boton-flota mt-auto" href="./paginas/reservas.html">Reservar ahora</a>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="seccion" aria-labelledby="como-alquilar">
+      <h2 id="como-alquilar">¿Cómo alquilar?</h2>
+      <p>Alquilar una bicicleta es muy sencillo. Solo necesitas rellenar el formulario en nuestro sitio web y seleccionar la bicicleta que deseas alquilar.</p>
+    </section>
+
+    <section class="seccion linksmain" aria-labelledby="encuentranos">
+      <h2 id="encuentranos">Encuéntranos</h2>
+      <p>Nos puedes encontrar ubicados en <em>el centro y afueras de Medellín</em>. <a href="#contacto">Mira nuestro contacto</a>.</p>
+      <p>Visítanos: <a href="https://www.google.com/maps/search/?api=1&amp;query=Medellin+Colombia" target="_blank" rel="noopener noreferrer">ver ubicación en el mapa</a>.</p>
+    </section>
+
+    <section class="seccion-ancha" aria-label="Servicios y beneficios">
+      <div class="row row-cols-1 row-cols-xl-3 g-4">
+
+        <div class="col">
+          <article class="tarjeta h-100 p-3">
+            <h2 id="servicios-atencion">Nuestros servicios</h2>
+            <ul class="linksmain">
+              <li>Atención personalizada al cliente</li>
+              <li>Alquiler por hora</li>
+              <li><a href="./paginas/tarifas.html#recorridos">Recorrido guiado</a></li>
+            </ul>
+            <img src="./img/img2.png" alt="Bicicleta eléctrica de llantas gruesas con alforjas">
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="tarjeta h-100 p-3">
+            <h2>Tres beneficios del servicio de alquiler de bicicletas</h2>
+            <ul>
+              <li>Movilidad sostenible y ecológica.</li>
+              <li>Fomenta la actividad física y el bienestar.</li>
+              <li>Evita el tráfico y facilita el desplazamiento por la ciudad.</li>
+            </ul>
+            <img src="./img/img4.webp" alt="Bicicletas en ruta">
+          </article>
+        </div>
+
+        <div class="col">
+          <article class="tarjeta h-100 p-3">
+            <h2>Nuevo</h2>
+            <ul>
+              <li>Nuevos modelos de bicicleta eléctrica a disposición del cliente.</li>
+            </ul>
+            <img src="./img/bicielec.jpeg" alt="Bicicleta eléctrica">
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <article class="seccion alquilar" aria-labelledby="pasos-alquilar">
+      <h2 id="pasos-alquilar">Pasos para alquilar una bicicleta</h2>
+      <ol>
+        <li><strong>Seleccionar</strong> la bicicleta que deseas alquilar.</li>
+        <li>Realizar el pago correspondiente.</li>
+        <li>Recoger la bicicleta en el punto de alquiler.</li>
+        <li>Disfrutar de tu paseo en bicicleta por Medellín.</li>
+      </ol>
+    </article>
+
+    <section class="seccion contacto mb-5" id="contacto" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+      <p>Si tienes alguna pregunta o deseas más información sobre nuestros servicios, no dudes en contactarnos a través de nuestro correo electrónico: <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-xl-3 align-items-center g-3">
+        <div class="col">
+          <dl class="horario mb-0">
+            <h4>Horarios</h4>
+            <dt>Lunes a viernes</dt>
+            <dd>De 7:00 a.m. a 7:00 p.m.</dd>
+            <dt>Sábados, domingos y festivos</dt>
+            <dd>De 6:00 a.m. a 2:00 p.m.</dd>
+          </dl>
+        </div>
+        <div class="col"><p class="mb-0">© 2026 Rueda Libre</p></div>
+        <div class="col"><p class="mb-0">Rueda Libre <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p></div>
+      </div>
+    </div>
+    <a class="boton-whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (se abre en una pestaña nueva)">WhatsApp</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

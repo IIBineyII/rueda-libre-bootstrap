@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservas | Rueda Libre</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <header class="portada">
+    <nav class="navbar navbar-expand-xl container-fluid px-4 py-3" aria-label="Principal">
+      <a class="navbar-brand marca" href="../index.html" aria-label="Rueda Libre, ir al inicio">Rueda Libre</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navegacion" aria-controls="navegacion" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navegacion">
+        <ul class="navbar-nav mt-3 mt-xl-0" id="menu">
+          <li class="nav-item"><a class="nav-link" href="../index.html"><strong>Inicio</strong></a></li>
+          <li class="nav-item"><a class="nav-link" href="./tarifas.html"><strong>Tarifas y rutas</strong></a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./reservas.html"><strong>Reservas</strong></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="portadaicono" aria-labelledby="titulo-reserva">
+      <img src="../img/images.jpg" alt="Logo de Rueda Libre">
+      <h1 id="titulo-reserva">Reserva tu bicicleta</h1>
+    </section>
+
+    <section class="seccion-ancha reservascolumnas">
+      <div class="row g-4">
+
+        <article class="col-12 col-xl-8" aria-labelledby="titulo-formulario">
+          <h2 id="titulo-formulario">Formulario de reserva</h2>
+
+          <div id="mensaje-exito" class="alert alert-success d-none" role="status">
+            ¡Reserva enviada! Te escribiremos al correo que registraste para confirmarla.
+          </div>
+
+          <form id="form-reserva" action="./reservas.html" method="post" aria-labelledby="titulo-formulario">
+            <fieldset>
+              <legend>Tus datos</legend>
+
+              <div class="mb-3">
+                <label class="form-label" for="nombre">Nombre completo</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" autocomplete="name" minlength="3" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="correo">Correo electrónico</label>
+                <input type="email" class="form-control" id="correo" name="correo" autocomplete="email" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="documento">Documento</label>
+                <input type="text" class="form-control" id="documento" name="documento" pattern="[0-9]{6,10}" title="Entre 6 y 10 dígitos, solo números" aria-describedby="ayuda-documento" required>
+                <small class="form-text" id="ayuda-documento">Solo números, entre 6 y 10 dígitos. Ej: 1020304050</small>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="celular">Celular</label>
+                <input type="tel" class="form-control" id="celular" name="celular" autocomplete="tel" inputmode="numeric" pattern="3[0-9]{9}" minlength="10" maxlength="10" title="Escriba 10 dígitos, empezando por el número 3" aria-describedby="ayuda-celular" required>
+                <small class="form-text" id="ayuda-celular">10 dígitos, debe empezar por 3. Ej: 3001234567</small>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Tu reserva</legend>
+
+              <div class="mb-3">
+                <label class="form-label" for="fechaalquiler">Fecha de alquiler</label>
+                <input type="date" class="form-control" id="fechaalquiler" name="fechaalquiler" min="2026-11-01" max="2026-12-31" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="tipo">Tipo de bicicleta</label>
+                <select class="form-select" id="tipo" name="tipo" required>
+                  <option value="">Selecciona una opción</option>
+                  <option value="urbana">Urbana</option>
+                  <option value="montana">Montaña</option>
+                  <option value="electrica">Eléctrica</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Plan</legend>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="plan" id="plan-2h" value="2h" required>
+                <label class="form-check-label" for="plan-2h">2 horas</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="plan" id="plan-3h" value="3h" required>
+                <label class="form-check-label" for="plan-3h">3 horas</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="plan" id="plan-4h" value="4h" required>
+                <label class="form-check-label" for="plan-4h">4 horas</label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Confirmación</legend>
+
+              <div class="mb-3">
+                <label class="form-label" for="comentarios">Comentarios (opcional)</label>
+                <textarea class="form-control" id="comentarios" name="comentarios" rows="4" maxlength="300"></textarea>
+              </div>
+
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="terminos" name="terminos" required>
+                <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+              </div>
+
+              <button type="submit" class="btn boton-enviar">Enviar reserva</button>
+            </fieldset>
+          </form>
+        </article>
+
+        <aside class="col-12 col-xl-4" aria-label="Horarios y contacto">
+          <div class="horarioreservas p-3 text-center">
+            <h2>Horarios</h2>
+            <dl class="horario">
+              <dt>Lunes a viernes</dt>
+              <dd>De 7:00 a.m. a 7:00 p.m.</dd>
+              <dt>Sábados, domingos y festivos</dt>
+              <dd>De 6:00 a.m. a 2:00 p.m.</dd>
+            </dl>
+            <h2>Contacto</h2>
+            <p><a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p>
+            <p class="mb-0"><a href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-xl-3 align-items-center g-3">
+        <div class="col">
+          <dl class="horario mb-0">
+            <h4>Horarios</h4>
+            <dt>Lunes a viernes</dt>
+            <dd>De 7:00 a.m. a 7:00 p.m.</dd>
+            <dt>Sábados, domingos y festivos</dt>
+            <dd>De 6:00 a.m. a 2:00 p.m.</dd>
+          </dl>
+        </div>
+        <div class="col"><p class="mb-0">© 2026 Rueda Libre</p></div>
+        <div class="col"><p class="mb-0">Rueda Libre <a href="mailto:hola@ruedalibre.example">hola@ruedalibre.example</a></p></div>
+      </div>
+    </div>
+    <a class="boton-whatsapp" href="https://wa.me/573000000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (se abre en una pestaña nueva)">WhatsApp</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // GitHub Pages es estático y no procesa POST: se valida con el navegador y se muestra confirmación.
+    document.getElementById('form-reserva').addEventListener('submit', function (e) {
+      e.preventDefault();
+      document.getElementById('mensaje-exito').classList.remove('d-none');
+      this.reset();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>

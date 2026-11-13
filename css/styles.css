@@ -1,0 +1,180 @@
+/* Rueda Libre - estilos propios sobre Bootstrap 5.3 */
+:root {
+  --color-verde-ruta: #1E7A4F;
+  --color-naranja-pedal: #F39A2B;
+  --color-azul-noche: #14213D;
+  --color-crema: #FAF6EF;
+  --color-gris-asfalto: #5B6470;
+  --color-blanco: #ffffff;
+
+  --font-heading: "Montserrat", Arial, sans-serif;
+  --font-body: "Open Sans", Arial, sans-serif;
+
+  /* Ajustes de Bootstrap */
+  --bs-body-bg: var(--color-crema);
+  --bs-body-color: var(--color-gris-asfalto);
+  --bs-body-font-family: var(--font-body);
+  --bs-body-line-height: 1.6;
+  --bs-link-color: var(--color-verde-ruta);
+  --bs-link-hover-color: var(--color-azul-noche);
+}
+
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
+h2 { font-size: 2rem; }
+a { text-decoration: none; }
+
+/* Header y menú */
+.portada { background-color: var(--color-azul-noche); color: var(--color-blanco); }
+.marca {
+  color: var(--color-blanco);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.marca:hover, .marca:focus { color: var(--color-blanco); text-decoration: underline; }
+
+#menu {
+  background-color: var(--color-crema);
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+#menu .nav-link {
+  color: var(--color-gris-asfalto);
+  font-size: 1.25rem;
+  padding: 0.5rem 1rem;
+  border-bottom: 4px solid transparent;
+}
+#menu .nav-link.active {
+  color: var(--color-verde-ruta);
+  font-weight: 600;
+  border-bottom-color: var(--color-verde-ruta);
+}
+#menu .nav-link:hover {
+  background-color: var(--color-naranja-pedal);
+  color: var(--color-azul-noche);
+  border-radius: 0.75rem;
+}
+#menu .nav-link:focus-visible {
+  outline: 3px solid var(--color-azul-noche);
+  outline-offset: 2px;
+  border-radius: 0.75rem;
+}
+.navbar-toggler { background-color: var(--color-crema); }
+
+/* Portada */
+#portadaicono {
+  min-height: 40vh;
+  background-color: var(--color-azul-noche);
+  padding: 2rem 1rem;
+}
+#portadaicono img { display: block; width: 500px; max-width: 100%; margin: auto; }
+#portadaicono h1 { color: var(--color-blanco); text-align: center; }
+
+/* Secciones */
+.seccion { max-width: 60rem; margin: 2rem auto 0; padding: 0 1rem; }
+.seccion-ancha { max-width: 75rem; margin: 2rem auto 0; padding: 0 1rem; }
+.quienes_somos img { border-radius: 0.75rem; }
+
+/* Botones */
+.boton-cta, .boton-flota {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-blanco);
+  background-color: var(--color-verde-ruta);
+  border: 2px solid var(--color-verde-ruta);
+}
+.boton-cta { padding: 1rem; border-radius: 0.375rem; }
+.boton-flota { border-radius: 0.75rem; padding: 0.5rem 1rem; }
+.boton-cta:hover, .boton-cta:focus-visible,
+.boton-flota:hover, .boton-flota:focus-visible {
+  background-color: var(--color-azul-noche);
+  border-color: var(--color-azul-noche);
+  color: var(--color-blanco);
+}
+.boton-cta:focus-visible, .boton-flota:focus-visible {
+  outline: 3px solid var(--color-azul-noche);
+  outline-offset: 3px;
+}
+.boton-cta:active, .boton-flota:active {
+  background-color: var(--color-naranja-pedal) !important;
+  border-color: var(--color-azul-noche) !important;
+  color: var(--color-azul-noche) !important;
+}
+
+/* Flota */
+.flota .card {
+  background-color: var(--color-blanco);
+  color: var(--color-azul-noche);
+  border: 1px solid;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+.flota .card img { border-radius: 0.75rem; max-width: 300px; width: 100%; height: auto; }
+
+/* Tarjetas de servicios */
+.tarjeta {
+  background-color: var(--color-blanco);
+  color: var(--color-azul-noche);
+  border: 1px solid var(--color-gris-asfalto);
+  border-radius: 0.75rem;
+}
+.tarjeta img { display: block; width: 65%; height: auto; border-radius: 0.5rem; margin: 0 auto; }
+
+/* Enlaces dentro de contenido */
+.linksmain a, .contacto a { color: var(--color-verde-ruta); }
+
+/* Footer */
+footer {
+  background-color: var(--color-azul-noche);
+  color: var(--color-blanco);
+  padding: 2rem 1rem 5rem;
+  text-align: center;
+}
+footer a { color: var(--color-naranja-pedal); }
+.horario dt { font-weight: 700; }
+.horario dd { margin-bottom: 0.5rem; }
+
+/* WhatsApp flotante */
+.boton-whatsapp {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1030;
+  background-color: var(--color-verde-ruta);
+  color: var(--color-blanco) !important;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+.boton-whatsapp:hover, .boton-whatsapp:focus-visible {
+  background-color: var(--color-naranja-pedal);
+  color: var(--color-azul-noche) !important;
+}
+
+/* Tablas de tarifas */
+.table { color: var(--color-gris-asfalto); background-color: var(--color-blanco); font-size: 0.9rem; margin-bottom: 2rem; }
+.table caption { color: var(--color-azul-noche); font-weight: 700; padding: 0.5rem 0; caption-side: top; text-align: left; }
+.table thead th { background-color: var(--color-azul-noche); color: var(--color-blanco); }
+.table th, .table td { border-color: var(--color-gris-asfalto); padding: 0.5rem 1rem; }
+.nota-tarifas { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; color: var(--color-azul-noche); }
+
+/* Formulario de reservas */
+#form-reserva { padding: 1rem; border: 1px solid var(--color-gris-asfalto); background-color: var(--color-blanco); border-radius: 0.75rem; }
+#form-reserva fieldset { margin-bottom: 1rem; padding: 1rem; border: 1px solid var(--color-gris-asfalto); border-radius: 0.5rem; }
+#form-reserva legend { float: none; width: auto; font-family: var(--font-heading); font-size: 1.1rem; font-weight: 700; color: var(--color-azul-noche); padding: 0 0.5rem; }
+.form-label { font-weight: 600; color: var(--color-azul-noche); }
+.form-text { color: var(--color-gris-asfalto); }
+.form-control, .form-select { border: 1px solid var(--color-gris-asfalto); }
+.form-control:focus, .form-select:focus, .form-check-input:focus {
+  border-color: var(--color-azul-noche);
+  box-shadow: none;
+  outline: 3px solid var(--color-azul-noche);
+  outline-offset: 2px;
+}
+.form-check-input:checked { background-color: var(--color-verde-ruta); border-color: var(--color-verde-ruta); }
+.boton-enviar { background-color: var(--color-verde-ruta); color: var(--color-blanco); font-weight: 700; padding: 1rem; border-radius: 0.75rem; }
+.boton-enviar:hover, .boton-enviar:focus-visible { background-color: var(--color-azul-noche); color: var(--color-blanco); }
+.horarioreservas { background-color: var(--color-blanco); border: 1px solid; border-radius: 0.75rem; color: var(--color-azul-noche); }
+.horarioreservas a { color: var(--color-verde-ruta); }
+.horario dt { margin-top: 0.5rem; }
